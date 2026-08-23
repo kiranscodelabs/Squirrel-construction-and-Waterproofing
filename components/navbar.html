@@ -1,0 +1,40 @@
+<nav class="fixed w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80 glass-nav">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="index.html" class="flex items-center gap-3 group">
+      <div class="w-10 h-10 bg-indigo-600 brand-mark flex items-center justify-center rounded-xl text-white shadow-lg shadow-indigo-600/30 transition-transform duration-300 group-hover:scale-105">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L2 12h3v8h6v-6h2v6h6v-8h3L12 2zm0 2.83l7 7V18h-2v-6h-2v6h-6v-6H7v6H5v-6.17l7-7z"/></svg>
+      </div>
+      <div class="flex flex-col leading-none">
+        <span class="text-xl font-extrabold tracking-tight text-slate-800 uppercase">Squirrel</span>
+        <span class="text-[9px] font-bold tracking-[0.2em] uppercase text-indigo-400 brand-accent mt-1">Construction &amp; Waterproofing</span>
+      </div>
+    </a>
+
+    <div class="hidden md:flex gap-8 items-center text-xs font-bold uppercase tracking-wider text-slate-300">
+      <a href="index.html" class="hover:text-indigo-400 transition-colors duration-150">Home</a>
+      <a href="#services" class="hover:text-indigo-400 transition-colors duration-150">Services</a>
+      <a href="#about" class="hover:text-indigo-400 transition-colors duration-150">About</a>
+      <a href="#portfolio" class="hover:text-indigo-400 transition-colors duration-150">Projects</a>
+      <a href="#contact" class="bg-indigo-600 text-white px-5 py-2.5 brand-btn hover:bg-indigo-500 transition-colors duration-200 text-xs font-bold uppercase tracking-wider rounded-xl shadow-lg shadow-indigo-600/30 hover:shadow-indigo-600/50">Get a Quote</a>
+    </div>
+
+    <button id="mobile-menu-btn" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden relative w-11 h-11 flex items-center justify-center rounded-lg border border-slate-700 bg-slate-900/90 text-slate-200 hover:text-white hover:border-indigo-500 transition-colors duration-200 cursor-pointer">
+      <span class="sr-only">Open menu</span>
+      <span class="relative block w-6 h-5" aria-hidden="true">
+        <span class="hamburger-line absolute left-0 top-0 block w-6 h-0.5 bg-current rounded-full"></span>
+        <span class="hamburger-line absolute left-0 top-1/2 -translate-y-1/2 block w-6 h-0.5 bg-current rounded-full"></span>
+        <span class="hamburger-line absolute left-0 bottom-0 block w-6 h-0.5 bg-current rounded-full"></span>
+      </span>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="mobile-menu-panel hidden md:hidden absolute left-0 top-full w-full bg-slate-900 border-b border-slate-800 shadow-2xl">
+    <div class="max-w-7xl mx-auto px-6 py-7 flex flex-col gap-2">
+      <a href="index.html" class="mobile-nav-link text-sm font-semibold uppercase tracking-[0.08em] text-slate-100 hover:text-white hover:bg-slate-800 transition-colors duration-200 rounded-lg px-4 py-3">Home</a>
+      <a href="#services" class="mobile-nav-link text-sm font-semibold uppercase tracking-[0.08em] text-slate-100 hover:text-white hover:bg-slate-800 transition-colors duration-200 rounded-lg px-4 py-3">Services</a>
+      <a href="#about" class="mobile-nav-link text-sm font-semibold uppercase tracking-[0.08em] text-slate-100 hover:text-white hover:bg-slate-800 transition-colors duration-200 rounded-lg px-4 py-3">About</a>
+      <a href="#portfolio" class="mobile-nav-link text-sm font-semibold uppercase tracking-[0.08em] text-slate-100 hover:text-white hover:bg-slate-800 transition-colors duration-200 rounded-lg px-4 py-3">Projects</a>
+      <a href="#contact" class="mobile-nav-link bg-indigo-600 text-white py-3.5 w-full brand-btn text-center text-sm font-bold uppercase tracking-[0.08em] rounded-xl shadow-lg shadow-indigo-600/30 hover:bg-indigo-500 transition-colors duration-200 mt-3">Get a Quote</a>
+    </div>
+  </div>
+</nav>
