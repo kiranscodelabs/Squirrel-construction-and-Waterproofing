@@ -135,7 +135,7 @@ const navTargets = [
   const form = document.getElementById('contact-form');
   if (!form) return;
 
-  const whatsappNumber = '918197437647';
+  const whatsappNumber = '918884377683';
 
   form.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -186,8 +186,16 @@ const navTargets = [
   document.addEventListener("DOMContentLoaded",async()=>{try{for(const [id,url] of components)await load(id,url)}catch(e){console.error("Component loading failed:",e)}});
 })();
 
+  document.addEventListener('click', function (event) {
+    const serviceLink = event.target.closest('a[data-service]');
+    if (!serviceLink) return;
 
-/* ============================================================
+    const serviceField = document.querySelector('#contact-form [name="service"]');
+    if (serviceField) serviceField.value = serviceLink.dataset.service;
+  });
+
+
+  /* ============================================================
    MOBILE NAVIGATION
    Delegated handler: works with dynamically injected navbar.
    ============================================================ */

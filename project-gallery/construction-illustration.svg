@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1000" fill="none" role="img" aria-labelledby="title description">
+  <title id="title">Construction and building protection illustration</title>
+  <desc id="description">An architectural illustration of a modern building under construction, with scaffolding, a crane, and rain-protective details.</desc>
+  <defs>
+    <linearGradient id="sky" x1="450" y1="0" x2="450" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5F1E8"/>
+      <stop offset="1" stop-color="#D8C5A8"/>
+    </linearGradient>
+    <linearGradient id="building" x1="500" y1="250" x2="500" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FAF8F2"/>
+      <stop offset="1" stop-color="#D8D2C5"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="450" y1="790" x2="450" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#343632"/>
+      <stop offset="1" stop-color="#242521"/>
+    </linearGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" stroke="#68645C" stroke-opacity=".12"/>
+    </pattern>
+    <filter id="shadow" x="120" y="180" width="700" height="740" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="24" stdDeviation="22" flood-color="#242521" flood-opacity=".16"/>
+    </filter>
+  </defs>
+
+  <path fill="url(#sky)" d="M0 0h900v1000H0z"/>
+  <path fill="url(#grid)" d="M0 0h900v1000H0z"/>
+  <circle cx="724" cy="175" r="74" fill="#C47B55" fill-opacity=".78"/>
+  <circle cx="724" cy="175" r="104" stroke="#FFFDF6" stroke-opacity=".5" stroke-width="2"/>
+
+  <g fill="#FFFDF8" fill-opacity=".72">
+    <path d="M88 188c0-28 23-51 51-51 18 0 34 10 43 25 6-4 14-6 22-6 23 0 42 19 42 42H88v-10Z"/>
+    <path d="M650 317c0-19 15-34 34-34 12 0 23 7 29 17 4-3 9-4 15-4 16 0 28 13 28 29h-106v-8Z"/>
+  </g>
+
+  <g stroke="#68645C" stroke-linecap="round" stroke-linejoin="round" stroke-width="9">
+    <path d="M86 784V154h253"/>
+    <path d="M104 183h462"/>
+    <path d="M194 183v-49h351"/>
+    <path d="m545 134 69 49"/>
+    <path d="M157 183v600M254 183v600M351 183v600"/>
+    <path d="m106 286 446-103M106 386l446-103M106 486l446-103M106 586l446-103M106 686l446-103M106 783l446-97"/>
+    <path d="m157 286 97 100m-97 0 97 100m-97 0 97 100m-97 0 97 100m-97 0 97 97m0-497 97 100m-97 0 97 100m-97 0 97 100m-97 0 97 100m-97 0 97 97m0-497 97 100m-97 0 97 100m-97 0 97 100m-97 0 97 100m-97 0 97 97"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <path d="M335 272h393v590H335z" fill="url(#building)"/>
+    <path d="m295 273 236-131 238 131H295Z" fill="#F8F7F0"/>
+    <path d="m295 273 236-131v37L328 302l-33-29Z" fill="#68645C"/>
+    <path d="m531 142 238 131-34 29-204-122v-38Z" fill="#343632"/>
+    <path d="M335 272h393v590H335z" stroke="#343632" stroke-width="10"/>
+    <path d="M335 420h393M335 567h393M335 714h393" stroke="#343632" stroke-width="14"/>
+    <path d="M457 277v580m148-580v580" stroke="#343632" stroke-width="10"/>
+    <path d="M361 306h77v82h-77zm122 0h99v82h-99zm143 0h76v82h-76zM361 455h77v83h-77zm122 0h99v83h-99zm143 0h76v83h-76zM361 601h77v87h-77zm122 0h99v87h-99zm143 0h76v87h-76z" fill="#D8C5A8" stroke="#68645C" stroke-width="8"/>
+    <path d="M361 735h77v127h-77zm122 0h99v127h-99zm143 0h76v127h-76z" fill="#EEE8DC" stroke="#68645C" stroke-width="8"/>
+    <path d="M489 792h68v70h-68z" fill="#A85F43"/>
+    <path d="M523 792v70m-34-35h68" stroke="#FFFDF6" stroke-opacity=".72" stroke-width="5"/>
+    <path d="M335 420h393M335 567h393M335 714h393" stroke="#A85F43" stroke-opacity=".82" stroke-width="5"/>
+  </g>
+
+  <path d="M0 861h900v139H0z" fill="url(#ground)"/>
+  <path d="M0 861c173-26 297 24 444 0 154-25 296-22 456 3v37H0v-40Z" fill="#68645C"/>
+  <path d="M0 932h900M63 966h279m84-34h396" stroke="#D8C5A8" stroke-opacity=".45" stroke-width="3"/>
+
+  <g fill="#C47B55">
+    <path d="m756 657 15 36h-30l15-36Zm55 77 13 31h-26l13-31Zm-99 65 18 42h-36l18-42Z"/>
+  </g>
+  <g stroke="#FAF8F2" stroke-linecap="round" stroke-width="5" opacity=".88">
+    <path d="m760 606-7 21m72 45-7 21m-93 23-7 21"/>
+  </g>
+  <g fill="#343632">
+    <path d="M184 858c0-18 14-32 32-32s32 14 32 32v77h-64v-77Z"/>
+    <circle cx="216" cy="807" r="25"/>
+    <path d="m185 806 12-35h40l11 35h-63Z" fill="#A85F43"/>
+    <path d="m187 857-31 55m91-54 35 43" stroke="#343632" stroke-width="18" stroke-linecap="round"/>
+  </g>
+  <path d="M116 937h183" stroke="#C47B55" stroke-width="8" stroke-linecap="round"/>
+</svg>
