@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Details | Squirrel Construction & Waterproofing</title>
+    <meta name="description" content="Explore our construction, renovation, waterproofing, fit-out, retrofitting, and structural audit services for homes and commercial spaces." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+      body.service-details-page {
+        background: var(--arch-paper) !important;
+        color: var(--arch-ink) !important;
+      }
+
+      .service-details-page nav {
+        background: rgba(241,238,230,.94) !important;
+        border-color: var(--arch-line) !important;
+        box-shadow: 0 8px 28px rgba(29,29,27,.055) !important;
+      }
+
+      .service-details-page nav a,
+      .service-details-page nav button {
+        color: var(--arch-charcoal) !important;
+      }
+
+      .service-details-page nav a:hover,
+      .service-details-page nav button:hover {
+        color: var(--arch-clay) !important;
+      }
+
+      .service-details-page nav .brand-mark {
+        background: var(--arch-ink) !important;
+        border-radius: 3px !important;
+        box-shadow: none !important;
+      }
+
+      .service-details-page nav .brand-accent {
+        color: var(--arch-clay) !important;
+        background: none !important;
+        -webkit-text-fill-color: var(--arch-clay) !important;
+      }
+
+      .service-details-page nav .brand-btn,
+      .service-details-page .detail-cta-primary {
+        background: var(--arch-clay) !important;
+        color: var(--arch-white) !important;
+        border: 1px solid var(--arch-clay) !important;
+        border-radius: 3px !important;
+        box-shadow: none !important;
+      }
+
+      .service-details-page nav .brand-btn:hover,
+      .service-details-page .detail-cta-primary:hover {
+        background: var(--arch-clay-dark) !important;
+        color: #fff !important;
+      }
+
+      .service-details-page .detail-cta-outline {
+        border: 1px solid var(--arch-line) !important;
+        border-radius: 3px !important;
+        background: var(--arch-white) !important;
+        color: var(--arch-ink) !important;
+      }
+
+      .service-details-page .detail-cta-outline:hover {
+        border-color: var(--arch-clay) !important;
+        color: var(--arch-clay-dark) !important;
+      }
+
+      .service-details-page #service-menu-btn {
+        background: var(--arch-white) !important;
+        border-color: var(--arch-line) !important;
+        color: var(--arch-ink) !important;
+      }
+
+      .service-details-page .page-intro {
+        background:
+          linear-gradient(115deg, rgba(216,210,197,.62), rgba(250,248,242,.84)),
+          var(--arch-white) !important;
+        border: 1px solid var(--arch-line) !important;
+        border-radius: 3px !important;
+        box-shadow: 0 18px 48px rgba(29,29,27,.06);
+      }
+
+      .service-details-page .page-intro h1,
+      .service-details-page .service-detail-card h2 {
+        color: var(--arch-ink) !important;
+      }
+
+      .service-details-page .page-intro p,
+      .service-details-page .service-detail-card p {
+        color: var(--arch-concrete) !important;
+      }
+
+      .service-details-page .service-pill {
+        background: rgba(168,95,67,.08) !important;
+        border: 1px solid rgba(168,95,67,.2) !important;
+        border-radius: 3px !important;
+        color: var(--arch-clay-dark) !important;
+      }
+
+      .service-details-page .service-detail-card {
+        position: relative;
+        overflow: hidden;
+        scroll-margin-top: 110px;
+        background: var(--arch-white) !important;
+        border: 1px solid var(--arch-line) !important;
+        border-radius: 3px !important;
+        box-shadow: 0 12px 32px rgba(29,29,27,.06) !important;
+        transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+      }
+
+      .service-details-page .service-detail-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 32px;
+        height: 2px;
+        background: var(--arch-clay);
+      }
+
+      .service-details-page .service-detail-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(168,95,67,.34) !important;
+        box-shadow: 0 20px 44px rgba(29,29,27,.1) !important;
+      }
+
+      .service-details-page .service-badge {
+        flex: 0 0 48px;
+        background: var(--arch-ink) !important;
+        border-radius: 3px !important;
+        color: var(--arch-paper) !important;
+        box-shadow: none !important;
+      }
+
+      .service-details-page .detail-list {
+        color: var(--arch-charcoal) !important;
+      }
+
+      .service-details-page .detail-list li::before {
+        content: "—";
+        color: var(--arch-clay) !important;
+        font-weight: 700;
+        margin-right: 10px;
+      }
+
+      .service-details-page .detail-cta-secondary {
+        border: 1px solid rgba(241,238,230,.24) !important;
+        border-radius: 3px !important;
+        background: transparent !important;
+        color: var(--arch-paper) !important;
+      }
+
+      .service-details-page .detail-cta-secondary:hover {
+        border-color: var(--arch-clay) !important;
+        color: #d69a7c !important;
+      }
+
+      .service-details-page .service-index a {
+        background: var(--arch-white);
+        border: 1px solid var(--arch-line);
+        border-radius: 3px;
+        color: var(--arch-charcoal);
+        transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+      }
+
+      .service-details-page .service-index a:hover,
+      .service-details-page .service-index a:focus-visible {
+        background: var(--arch-ink);
+        border-color: var(--arch-ink);
+        color: var(--arch-paper) !important;
+      }
+
+      .service-details-page .service-index span {
+        color: var(--arch-clay);
+      }
+
+      .service-details-page nav.service-index {
+        position: static !important;
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+      }
+
+      .service-details-page .mobile-menu-panel {
+        background: var(--arch-paper) !important;
+        border-color: var(--arch-line) !important;
+      }
+
+      .service-details-page .mobile-menu-panel a {
+        color: var(--arch-charcoal) !important;
+      }
+
+      .service-details-page .service-cta {
+        background: linear-gradient(135deg, #1d1d1b, #2b2c29) !important;
+        border: 1px solid var(--arch-line);
+        border-radius: 3px !important;
+        color: var(--arch-paper) !important;
+        box-shadow: 0 22px 48px rgba(29,29,27,.16) !important;
+      }
+
+      .service-details-page .service-cta h2 {
+        color: var(--arch-paper) !important;
+      }
+
+      .service-details-page .service-cta > div > div > span {
+        color: #c98a6e !important;
+      }
+
+      @media (max-width: 767px) {
+        .service-details-page .page-intro {
+          padding: 24px !important;
+        }
+
+        .service-details-page .service-detail-card {
+          padding: 24px !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="service-details-page">
+    <nav class="fixed w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 brand-mark flex items-center justify-center rounded-xl text-white transition-transform duration-300 group-hover:scale-105">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L2 12h3v8h6v-6h2v6h6v-8h3L12 2zm0 2.83l7 7V18h-2v-6h-2v6h-6v-6H7v6H5v-6.17l7-7z"/></svg>
+          </div>
+          <div class="flex flex-col leading-none">
+            <span class="text-xl font-extrabold tracking-tight uppercase">Squirrel</span>
+            <span class="text-[9px] font-bold tracking-[0.2em] uppercase brand-accent mt-1">Construction &amp; Waterproofing</span>
+          </div>
+        </a>
+
+        <div class="hidden md:flex gap-8 items-center text-xs font-bold uppercase tracking-wider text-slate-300">
+          <a href="index.html" class="hover:text-indigo-400 transition-colors duration-150">Home</a>
+          <a href="index.html#services" class="hover:text-indigo-400 transition-colors duration-150">Services</a>
+          <a href="index.html#about" class="hover:text-indigo-400 transition-colors duration-150">About</a>
+          <a href="index.html#portfolio" class="hover:text-indigo-400 transition-colors duration-150">Projects</a>
+          <a href="index.html#contact" class="brand-btn px-5 py-2.5 transition-colors duration-200 text-xs font-bold uppercase tracking-wider">Get a Quote</a>
+        </div>
+
+        <button id="service-menu-btn" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="service-mobile-menu" class="md:hidden relative w-11 h-11 flex items-center justify-center rounded-lg border border-slate-700 bg-slate-900/90 text-slate-200 transition-colors duration-200 cursor-pointer">
+          <span class="sr-only">Open menu</span>
+          <span class="relative block w-6 h-5" aria-hidden="true">
+            <span class="absolute left-0 top-0 block w-6 h-0.5 bg-current rounded-full"></span>
+            <span class="absolute left-0 top-1/2 -translate-y-1/2 block w-6 h-0.5 bg-current rounded-full"></span>
+            <span class="absolute left-0 bottom-0 block w-6 h-0.5 bg-current rounded-full"></span>
+          </span>
+        </button>
+      </div>
+
+      <div id="service-mobile-menu" class="mobile-menu-panel hidden md:hidden absolute left-0 top-full w-full border-b shadow-2xl">
+        <div class="max-w-7xl mx-auto px-6 py-7 flex flex-col gap-2">
+          <a href="index.html" class="rounded-lg px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em]">Home</a>
+          <a href="index.html#services" class="rounded-lg px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em]">Services</a>
+          <a href="index.html#about" class="rounded-lg px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em]">About</a>
+          <a href="index.html#portfolio" class="rounded-lg px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em]">Projects</a>
+          <a href="index.html#contact" class="detail-cta-primary mt-3 rounded-lg px-4 py-3 text-center text-sm font-bold uppercase tracking-[0.08em]">Get a Quote</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="pt-28 pb-20">
+      <section class="max-w-7xl mx-auto px-6 pt-10 pb-16">
+        <div class="page-intro max-w-5xl p-7 md:p-10">
+          <div class="flex flex-wrap gap-3 mb-6">
+            <span class="service-pill inline-flex items-center rounded-full px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em]">Construction</span>
+            <span class="service-pill inline-flex items-center rounded-full px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em]">Waterproofing</span>
+            <span class="service-pill inline-flex items-center rounded-full px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em]">Structural Care</span>
+          </div>
+
+          <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
+            Built to last. Protected to perform.
+          </h1>
+          <p class="mt-5 max-w-3xl text-lg text-slate-600 leading-relaxed">
+            Whether you are planning a new build, upgrading an existing property, or solving persistent moisture and structural concerns, our services are designed to bring strength, reliability, and peace of mind to every project.
+          </p>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a href="index.html#contact" class="detail-cta-primary px-6 py-3 font-bold transition-colors duration-200 text-center">Discuss Your Project</a>
+            <a href="tel:+918884377683" class="detail-cta-outline px-6 py-3 font-bold transition-colors duration-200 text-center">Call +91 88843 77683</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-6 pb-20">
+        <nav aria-label="Jump to a service" class="service-index mb-10 grid grid-cols-2 md:grid-cols-3 gap-3">
+          <a class="flex items-center gap-3 p-4 text-sm font-semibold" href="#structural-engineering"><span>01</span> Structural Design</a>
+          <a class="flex items-center gap-3 p-4 text-sm font-semibold" href="#renovation-remodeling"><span>02</span> Renovation</a>
+          <a class="flex items-center gap-3 p-4 text-sm font-semibold" href="#waterproofing"><span>03</span> Waterproofing</a>
+          <a class="flex items-center gap-3 p-4 text-sm font-semibold" href="#interior-fitouts"><span>04</span> Interior Fit-outs</a>
+          <a class="flex items-center gap-3 p-4 text-sm font-semibold" href="#retrofitting-strengthening"><span>05</span> Retrofitting</a>
+          <a class="flex items-center gap-3 p-4 text-sm font-semibold" href="#ndt-testing"><span>06</span> Structural Audit</a>
+        </nav>
+        <div class="grid gap-8">
+          <article id="structural-engineering" class="service-detail-card p-7 md:p-10">
+            <div class="flex items-start gap-4 mb-5">
+              <div class="service-badge w-12 h-12 rounded-2xl flex items-center justify-center text-lg font-bold shadow-lg shadow-indigo-500/20">01</div>
+              <div>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900">Structural Engineering &amp; Design</h2>
+              </div>
+            </div>
+            <p class="text-slate-600 leading-relaxed text-base md:text-lg max-w-4xl">
+              Thoughtful structural design is the foundation of safe, efficient, and lasting construction. We develop practical engineering solutions that align with site realities, load requirements, and long-term durability goals.
+            </p>
+            <ul class="detail-list mt-6 text-slate-700 leading-relaxed space-y-2 text-sm md:text-base">
+              <li>Design support for new construction, additions, and structural alteration work.</li>
+              <li>Load-aware planning to improve strength, stability, and project confidence.</li>
+              <li>Clear engineering guidance for homes, commercial spaces, and renovation projects.</li>
+            </ul>
+          </article>
+
+          <article id="renovation-remodeling" class="service-detail-card p-7 md:p-10">
+            <div class="flex items-start gap-4 mb-5">
+              <div class="service-badge w-12 h-12 rounded-2xl flex items-center justify-center text-lg font-bold shadow-lg shadow-indigo-500/20">02</div>
+              <div>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900">Renovation &amp; Remodeling</h2>
+              </div>
+            </div>
+            <p class="text-slate-600 leading-relaxed text-base md:text-lg max-w-4xl">
+              Renovating an existing space should improve both its performance and its experience. We transform outdated or inefficient areas into functional, modern environments without compromising safety or long-term value.
+            </p>
+            <ul class="detail-list mt-6 text-slate-700 leading-relaxed space-y-2 text-sm md:text-base">
+              <li>Interior and exterior upgrades that improve daily usability and aesthetics.</li>
+              <li>Smart space reconfiguration for better flow, efficiency, and comfort.</li>
+              <li>Renovation planning that respects timelines, budgets, and structural realities.</li>
+            </ul>
+          </article>
+
+          <article id="waterproofing" class="service-detail-card p-7 md:p-10">
+            <div class="flex items-start gap-4 mb-5">
+              <div class="service-badge w-12 h-12 rounded-2xl flex items-center justify-center text-lg font-bold shadow-lg shadow-indigo-500/20">03</div>
+              <div>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900">Waterproofing &amp; Defense</h2>
+              </div>
+            </div>
+            <p class="text-slate-600 leading-relaxed text-base md:text-lg max-w-4xl">
+              Water damage can quietly undermine a building over time. Our waterproofing systems are designed to stop seepage, reduce maintenance issues, and protect concrete, masonry, and exposed surfaces from moisture damage.
+            </p>
+            <ul class="detail-list mt-6 text-slate-700 leading-relaxed space-y-2 text-sm md:text-base">
+              <li>Leak prevention for terraces, roofs, basements, bathrooms, and wet areas.</li>
+              <li>High-performance coatings and protection systems for long-term durability.</li>
+              <li>Moisture control measures that safeguard finish quality and structural health.</li>
+            </ul>
+          </article>
+
+          <article id="interior-fitouts" class="service-detail-card p-7 md:p-10">
+            <div class="flex items-start gap-4 mb-5">
+              <div class="service-badge w-12 h-12 rounded-2xl flex items-center justify-center text-lg font-bold shadow-lg shadow-indigo-500/20">04</div>
+              <div>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900">Interior Architecture &amp; Fit-outs</h2>
+              </div>
+            </div>
+            <p class="text-slate-600 leading-relaxed text-base md:text-lg max-w-4xl">
+              A well-designed interior should feel effortless to use and reflect the way people live and work. Our fit-out services focus on creating practical, polished spaces that support comfort, productivity, and visual appeal.
+            </p>
+            <ul class="detail-list mt-6 text-slate-700 leading-relaxed space-y-2 text-sm md:text-base">
+              <li>Residential and commercial fit-outs tailored to your needs and workflow.</li>
+              <li>Smart spatial planning with clean detailing and efficient use of area.</li>
+              <li>Interior execution built for both functionality and a refined finish.</li>
+            </ul>
+          </article>
+
+          <article id="retrofitting-strengthening" class="service-detail-card p-7 md:p-10">
+            <div class="flex items-start gap-4 mb-5">
+              <div class="service-badge w-12 h-12 rounded-2xl flex items-center justify-center text-lg font-bold shadow-lg shadow-indigo-500/20">05</div>
+              <div>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900">Retrofitting &amp; Strengthening</h2>
+              </div>
+            </div>
+            <p class="text-slate-600 leading-relaxed text-base md:text-lg max-w-4xl">
+              Strengthening existing structures is a practical and cost-effective way to improve safety, extend service life, and handle changing functional demands. Our retrofitting solutions are designed to reinforce vulnerable elements while preserving the overall structure.
+            </p>
+            <ul class="detail-list mt-6 text-slate-700 leading-relaxed space-y-2 text-sm md:text-base">
+              <li>Structural reinforcement solutions for aging or distressed buildings.</li>
+              <li>Repair-focused strengthening to improve load-bearing performance.</li>
+              <li>Targeted interventions that reduce risk without unnecessary demolition.</li>
+            </ul>
+          </article>
+
+          <article id="ndt-testing" class="service-detail-card p-7 md:p-10">
+            <div class="flex items-start gap-4 mb-5">
+              <div class="service-badge w-12 h-12 rounded-2xl flex items-center justify-center text-lg font-bold shadow-lg shadow-indigo-500/20">06</div>
+              <div>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900">NDT Testing &amp; Structural Audit</h2>
+              </div>
+            </div>
+            <p class="text-slate-600 leading-relaxed text-base md:text-lg max-w-4xl">
+              Before committing to major repairs or upgrades, it is essential to understand what the structure is telling you. Our non-destructive testing and audits help identify defects, assess condition, and guide timely, evidence-based decisions.
+            </p>
+            <ul class="detail-list mt-6 text-slate-700 leading-relaxed space-y-2 text-sm md:text-base">
+              <li>Diagnostics that assess concrete quality, distress, and structural performance.</li>
+              <li>Non-invasive testing to identify issues without unnecessary disruption.</li>
+              <li>Practical insight for maintenance planning, repair strategy, and safety checks.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-6 pb-12">
+        <div class="service-cta px-6 py-10 md:px-10 md:py-12">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div>
+              <span class="block text-xs font-bold uppercase tracking-[0.2em] mb-3">Need the right solution?</span>
+              <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Let’s talk about the best way to protect and improve your property.</h2>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-3">
+              <a href="index.html#contact" class="detail-cta-primary px-6 py-3 font-bold transition-colors duration-200 text-center">Request a Quote</a>
+              <a href="tel:+918884377683" class="detail-cta-secondary px-6 py-3 font-bold transition-colors duration-200 text-center">Call Us</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      const menuButton = document.getElementById('service-menu-btn');
+      const mobileMenu = document.getElementById('service-mobile-menu');
+
+      menuButton.addEventListener('click', () => {
+        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', String(!isExpanded));
+        menuButton.setAttribute('aria-label', isExpanded ? 'Open navigation menu' : 'Close navigation menu');
+        mobileMenu.classList.toggle('hidden', isExpanded);
+      });
+
+      mobileMenu.addEventListener('click', (event) => {
+        if (event.target.closest('a')) {
+          mobileMenu.classList.add('hidden');
+          menuButton.setAttribute('aria-expanded', 'false');
+          menuButton.setAttribute('aria-label', 'Open navigation menu');
+        }
+      });
+    </script>
+  </body>
+</html>
